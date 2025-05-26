@@ -1,5 +1,6 @@
 import os
-from flask import Flask, request, abort, url_for, flash, secure_filename
+from flask import Flask, request, abort, flash
+from werkzeug.utils import secure_filename
 import whisper
 
 wm = whisper.load_model(name="tiny", download_root="/tmp")
@@ -44,4 +45,4 @@ def process_voice(filename):
 
 
 if __name__ == '__main__':
-    app.run(host="0.0.0.0", port=5000, debug=True)
+	app.run(host='0.0.0.0', port=5000)

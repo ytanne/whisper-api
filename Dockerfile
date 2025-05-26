@@ -12,4 +12,4 @@ RUN apt-get update && \
 RUN pip install --no-cache-dir -r requirements.txt
 
 # Default entrypoint
-ENTRYPOINT ["flask", "--app", "main", "run"]
+ENTRYPOINT ["python3", "main.py"]
